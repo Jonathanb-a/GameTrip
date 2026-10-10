@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GameTrip Seguro: seguros de viaje para gamers que visitan los destinos reales de sus videojuegos favoritos.">
+    <title>GameTrip Seguro | Seguros de viaje para gamers</title>
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+
+    <!-- ===== ENCABEZADO ===== -->
+    <header class="header">
+        <div class="contenedor header-contenido">
+            <a href="#inicio" class="logo">
+                <img src="img/logo.png" alt="Logotipo de GameTrip Seguro" class="logo-img" width="48" height="48">
+                <span class="logo-texto">GameTrip <span class="logo-acento">Seguro</span></span>
+            </a>
+
+            <button type="button" id="btn-menu" class="btn-menu" aria-label="Abrir menú de navegación" aria-controls="nav-principal" aria-expanded="false">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+
+            <nav id="nav-principal" class="nav" aria-label="Navegación principal">
+                <ul class="nav-lista">
+                    <li class="nav-item"><a href="#inicio" class="nav-enlace">Inicio</a></li>
+                    <li class="nav-item"><a href="#destinos" class="nav-enlace">Destinos</a></li>
+                    <li class="nav-item"><a href="#planes" class="nav-enlace">Planes</a></li>
+                    <li class="nav-item"><a href="#cotizador" class="nav-enlace">Cotizador</a></li>
+                    <li class="nav-item"><a href="#galeria" class="nav-enlace">Galería</a></li>
+                    <li class="nav-item"><a href="#contacto" class="nav-enlace">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ===== INICIO / HERO ===== -->
+        <section id="inicio" class="seccion hero">
+            <div class="contenedor hero-contenido">
+                <div class="hero-texto">
+                    <h1 class="hero-titulo">Ya recorriste el mapa. Ahora viaja al de verdad.</h1>
+                    <p class="hero-descripcion">
+                        Protegemos tu aventura por las ciudades que conociste con un control en las manos.
+                        En el mundo real no hay punto de guardado, pero con GameTrip Seguro siempre tienes una vida extra.
+                    </p>
+                    <a href="#cotizador" class="btn btn-primario">
+                        <i class="fa-solid fa-calculator" aria-hidden="true"></i>
+                        Cotiza tu viaje
+                    </a>
+                </div>
+                <div class="hero-imagen">
+                    <img src="img/hero.jpg" alt="Viajero con mochila y control de videojuegos contemplando una ciudad iluminada al atardecer">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== DESTINOS ===== -->
+        <section id="destinos" class="seccion destinos">
+            <div class="contenedor">
+                <h2 class="seccion-titulo">Destinos desbloqueados</h2>
+                <p class="seccion-subtitulo">Cinco ciudades que ya conoces de memoria, aunque nunca hayas pisado sus calles.</p>
+
+                <div class="carrusel">
+                    <button type="button" id="car-prev" class="carrusel-btn carrusel-btn-prev" aria-label="Ver destinos anteriores">
+                        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+
+                    <div class="carrusel-pista">
+
+                        <article class="card-destino" data-destino="tokio" tabindex="0" role="button" aria-label="Ver más sobre Tokio, Persona / Yakuza">
+                            <img src="img/destino-tokio.jpg" alt="Calle de Tokio de noche llena de letreros de neón" class="card-destino-imagen">
+                            <div class="card-destino-info">
+                                <h3 class="card-destino-lugar">Tokio</h3>
+                                <span class="card-destino-juego">
+                                    <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+                                    Persona / Yakuza
+                                </span>
+                            </div>
+                        </article>
+
+                        <article class="card-destino" data-destino="los-angeles" tabindex="0" role="button" aria-label="Ver más sobre Los Ángeles, Grand Theft Auto">
+                            <img src="img/destino-los-angeles.jpg" alt="Avenida de Los Ángeles con palmeras y el letrero de Hollywood al fondo" class="card-destino-imagen">
+                            <div class="card-destino-info">
+                                <h3 class="card-destino-lugar">Los Ángeles</h3>
+                                <span class="card-destino-juego">
+                                    <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+                                    Grand Theft Auto
+                                </span>
+                            </div>
+                        </article>
+
+                        <article class="card-destino" data-destino="venecia" tabindex="0" role="button" aria-label="Ver más sobre Venecia, Assassin's Creed">
+                            <img src="img/destino-venecia.jpg" alt="Canal de Venecia con góndolas y edificios históricos" class="card-destino-imagen">
+                            <div class="card-destino-info">
+                                <h3 class="card-destino-lugar">Venecia</h3>
+                                <span class="card-destino-juego">
+                                    <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+                                    Assassin's Creed
+                                </span>
+                            </div>
+                        </article>
+
+                        <article class="card-destino" data-destino="florencia" tabindex="0" role="button" aria-label="Ver más sobre Florencia, Assassin's Creed">
+                            <img src="img/destino-florencia.jpg" alt="Vista panorámica de Florencia con la cúpula de Santa María del Fiore" class="card-destino-imagen">
+                            <div class="card-destino-info">
+                                <h3 class="card-destino-lugar">Florencia</h3>
+                                <span class="card-destino-juego">
+                                    <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+                                    Assassin's Creed
+                                </span>
+                            </div>
+                        </article>
+
+                        <article class="card-destino" data-destino="cdmx" tabindex="0" role="button" aria-label="Ver más sobre CDMX, Forza Horizon 5">
+                            <img src="img/destino-cdmx.jpg" alt="Paseo de la Reforma en la Ciudad de México con el Ángel de la Independencia" class="card-destino-imagen">
+                            <div class="card-destino-info">
+                                <h3 class="card-destino-lugar">CDMX</h3>
+                                <span class="card-destino-juego">
+                                    <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+                                    Forza Horizon 5
+                                </span>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <button type="button" id="car-next" class="carrusel-btn carrusel-btn-next" aria-label="Ver destinos siguientes">
+                        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PLANES ===== -->
+        <section id="planes" class="seccion planes">
+            <div class="contenedor">
+                <h2 class="seccion-titulo">Elige tu dificultad</h2>
+                <p class="seccion-subtitulo">Tres niveles de protección para que cada quien juegue su viaje a su manera.</p>
+
+                <div class="planes-grid">
+
+                    <article class="card-plan">
+                        <i class="fa-solid fa-shield-halved card-plan-icono" aria-hidden="true"></i>
+                        <h3 class="card-plan-nombre">Básico</h3>
+                        <p class="card-plan-precio">
+                            <span class="card-plan-monto">$150 MXN</span>
+                            <span class="card-plan-periodo">por día / persona</span>
+                        </p>
+                        <ul class="card-plan-coberturas">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Asistencia médica de emergencia</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Equipaje perdido o demorado</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Atención telefónica 24/7 en español</li>
+                        </ul>
+                        <a href="#cotizador" class="btn btn-secundario">Elegir Básico</a>
+                    </article>
+
+                    <article class="card-plan card-plan-destacado">
+                        <i class="fa-solid fa-compass card-plan-icono" aria-hidden="true"></i>
+                        <h3 class="card-plan-nombre">Aventurero</h3>
+                        <p class="card-plan-precio">
+                            <span class="card-plan-monto">$280 MXN</span>
+                            <span class="card-plan-periodo">por día / persona</span>
+                        </p>
+                        <ul class="card-plan-coberturas">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Todo lo del plan Básico</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Cancelación o interrupción del viaje</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Robo o daño de consolas portátiles y laptops</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Cobertura en excursiones y tours temáticos</li>
+                        </ul>
+                        <a href="#cotizador" class="btn btn-primario">Elegir Aventurero</a>
+                    </article>
+
+                    <article class="card-plan">
+                        <i class="fa-solid fa-crown card-plan-icono" aria-hidden="true"></i>
+                        <h3 class="card-plan-nombre">Legendario</h3>
+                        <p class="card-plan-precio">
+                            <span class="card-plan-monto">$450 MXN</span>
+                            <span class="card-plan-periodo">por día / persona</span>
+                        </p>
+                        <ul class="card-plan-coberturas">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Todo lo del plan Aventurero</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Reembolso de entradas a convenciones y torneos</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Repatriación y traslado médico</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Asesor personal durante todo el viaje</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Sin deducible en ningún reclamo</li>
+                        </ul>
+                        <a href="#cotizador" class="btn btn-secundario">Elegir Legendario</a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== COTIZADOR ===== -->
+        <section id="cotizador" class="seccion cotizador">
+            <div class="contenedor">
+                <h2 class="seccion-titulo">Cotizador</h2>
+                <p class="seccion-subtitulo">Arma tu partida: dinos a dónde vas, cuánto tiempo y con quién.</p>
+
+                <form id="form-cotizador" class="formulario form-cotizador">
+                    <div class="campo">
+                        <label for="cotizador-destino" class="campo-etiqueta">
+                            <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+                            Destino
+                        </label>
+                        <select id="cotizador-destino" name="destino" class="campo-control" required>
+                            <option value="" selected disabled>Selecciona un destino</option>
+                            <option value="tokio">Tokio (Persona / Yakuza)</option>
+                            <option value="los-angeles">Los Ángeles (GTA)</option>
+                            <option value="venecia">Venecia (Assassin's Creed)</option>
+                            <option value="florencia">Florencia (Assassin's Creed)</option>
+                            <option value="cdmx">CDMX (Forza Horizon 5)</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="cotizador-dias" class="campo-etiqueta">
+                            <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
+                            Días de viaje
+                        </label>
+                        <input type="number" id="cotizador-dias" name="dias" class="campo-control" min="1" max="90" placeholder="Ej. 7" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="cotizador-personas" class="campo-etiqueta">
+                            <i class="fa-solid fa-users" aria-hidden="true"></i>
+                            Personas
+                        </label>
+                        <input type="number" id="cotizador-personas" name="personas" class="campo-control" min="1" max="10" placeholder="Ej. 2" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="cotizador-plan" class="campo-etiqueta">
+                            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                            Plan
+                        </label>
+                        <select id="cotizador-plan" name="plan" class="campo-control" required>
+                            <option value="" selected disabled>Selecciona un plan</option>
+                            <option value="basico">Básico</option>
+                            <option value="aventurero">Aventurero</option>
+                            <option value="legendario">Legendario</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" id="btn-calcular" class="btn btn-primario">
+                        <i class="fa-solid fa-calculator" aria-hidden="true"></i>
+                        Calcular
+                    </button>
+                </form>
+
+                <div id="resultado" class="resultado" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <!-- ===== GALERÍA ===== -->
+        <section id="galeria" class="seccion galeria">
+            <div class="contenedor">
+                <h2 class="seccion-titulo">Galería</h2>
+                <p class="seccion-subtitulo">Capturas de pantalla, pero tomadas con cámara.</p>
+
+                <div class="galeria-grid">
+                    <figure class="galeria-item">
+                        <img src="img/galeria1.jpg" alt="Cruce peatonal de Shibuya en Tokio lleno de gente bajo pantallas luminosas" class="galeria-imagen">
+                    </figure>
+                    <figure class="galeria-item">
+                        <img src="img/galeria2.jpg" alt="Muelle de Santa Mónica en Los Ángeles con su rueda de la fortuna al atardecer" class="galeria-imagen">
+                    </figure>
+                    <figure class="galeria-item">
+                        <img src="img/galeria3.jpg" alt="Góndolas atracadas frente a la Plaza de San Marcos en Venecia" class="galeria-imagen">
+                    </figure>
+                    <figure class="galeria-item">
+                        <img src="img/galeria4.jpg" alt="Ponte Vecchio sobre el río Arno en Florencia" class="galeria-imagen">
+                    </figure>
+                    <figure class="galeria-item">
+                        <img src="img/galeria5.jpg" alt="Palacio de Bellas Artes en el centro de la Ciudad de México" class="galeria-imagen">
+                    </figure>
+                    <figure class="galeria-item">
+                        <img src="img/galeria6.jpg" alt="Grupo de amigos viajeros con mochilas revisando un mapa en la calle" class="galeria-imagen">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACTO ===== -->
+        <section id="contacto" class="seccion contacto">
+            <div class="contenedor">
+                <h2 class="seccion-titulo">Contacto</h2>
+                <p class="seccion-subtitulo">¿Dudas antes de iniciar la partida? Escríbenos y te respondemos sin pantallas de carga.</p>
+
+                <form id="form-contacto" class="formulario form-contacto">
+                    <div class="campo">
+                        <label for="contacto-nombre" class="campo-etiqueta">
+                            <i class="fa-solid fa-user" aria-hidden="true"></i>
+                            Nombre
+                        </label>
+                        <input type="text" id="contacto-nombre" name="nombre" class="campo-control" placeholder="Tu nombre o gamertag" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="contacto-correo" class="campo-etiqueta">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                            Correo
+                        </label>
+                        <input type="email" id="contacto-correo" name="correo" class="campo-control" placeholder="jugador@correo.com" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="contacto-mensaje" class="campo-etiqueta">
+                            <i class="fa-solid fa-message" aria-hidden="true"></i>
+                            Mensaje
+                        </label>
+                        <textarea id="contacto-mensaje" name="mensaje" class="campo-control" rows="5" placeholder="Cuéntanos a dónde quieres viajar" required></textarea>
+                    </div>
+
+                    <button type="submit" id="btn-enviar" class="btn btn-primario">
+                        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                        Enviar
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== PIE DE PÁGINA ===== -->
+    <footer class="footer">
+        <div class="contenedor footer-contenido">
+            <div class="footer-marca">
+                <img src="img/logo.png" alt="Logotipo de GameTrip Seguro" class="logo-img footer-logo" width="32" height="32">
+                <span class="logo-texto">GameTrip <span class="logo-acento">Seguro</span></span>
+            </div>
+
+            <div class="footer-equipo">
+                <h2 class="footer-titulo">
+                    <i class="fa-solid fa-users" aria-hidden="true"></i>
+                    Equipo
+                </h2>
+                <ul class="footer-lista">
+                    <li>Jonathan Barrios</li>
+                    <li>Saria Giron</li>
+                    <li>Osiris Queztalcoa</li>
+                    <li>Jose de Jesus Ramos</li>
+                </ul>
+            </div>
+
+            <div class="footer-redes">
+                <h2 class="footer-titulo">Síguenos</h2>
+                <ul class="redes-lista">
+                    <li><a href="#" class="redes-enlace" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="redes-enlace" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="redes-enlace" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="redes-enlace" aria-label="Twitch"><i class="fa-brands fa-twitch" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="redes-enlace" aria-label="Discord"><i class="fa-brands fa-discord" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+
+            <p class="footer-derechos">
+                <i class="fa-regular fa-copyright" aria-hidden="true"></i>
+                2026 GameTrip Seguro. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ===== MODAL (se llena con JavaScript) ===== -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-contenido">
+            <button type="button" id="btn-cerrar-modal" class="modal-cerrar" aria-label="Cerrar ventana">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+            <div id="modal-cuerpo" class="modal-cuerpo"></div>
+        </div>
+    </div>
+
+</body>
+</html>
