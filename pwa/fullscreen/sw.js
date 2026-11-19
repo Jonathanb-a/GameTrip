@@ -7,7 +7,7 @@
    ========================================================= */
 
 // Cambia este número cuando modifiques archivos, para que se descargue la versión nueva
-const VERSION_CACHE = "v1";
+const VERSION_CACHE = "v2";
 
 // Nombre de la carpeta de esta versión (browser, minimal-ui, standalone o fullscreen)
 const CARPETA = new URL(self.registration.scope).pathname.split("/").filter(Boolean).pop();
