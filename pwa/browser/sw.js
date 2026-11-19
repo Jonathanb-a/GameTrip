@@ -7,7 +7,7 @@
    ========================================================= */
 
 // Cambia este número cuando modifiques archivos, para que se descargue la versión nueva
-const VERSION_CACHE = "v2";
+const VERSION_CACHE = "v3";
 
 // Nombre de la carpeta de esta versión (browser, minimal-ui, standalone o fullscreen)
 const CARPETA = new URL(self.registration.scope).pathname.split("/").filter(Boolean).pop();
@@ -126,7 +126,7 @@ async function responderExterno(peticion) {
     const guardada = await cache.match(peticion);
     const deRed = fetch(peticion).then(function (respuesta) {
         if (respuesta.ok || respuesta.type === "opaque") {
-            cache.put(peticion, respuesta.clone());
+            cache.put(peticion, respuesta.clone()).catch(function () {});
         }
         return respuesta;
     }).catch(function () {
@@ -135,10 +135,11 @@ async function responderExterno(peticion) {
     return guardada || deRed;
 }
 
-// Intercepta cada petición de la página y decide de dónde responder
+// Intercepta cada petición de la página y decide de dónde responder.
+// Solo maneja peticiones GET por http o https; las de extensiones del navegador se dejan pasar
 self.addEventListener("fetch", function (evento) {
     const peticion = evento.request;
-    if (peticion.method !== "GET") {
+    if (peticion.method !== "GET" || !peticion.url.startsWith("http")) {
         return;
     }
     if (peticion.mode === "navigate") {
